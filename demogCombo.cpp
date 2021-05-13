@@ -21,14 +21,15 @@ std::ostream& operator<<(std::ostream &out, const demogCombo&SD) {
     out << "\n(under 5): " << SD.getpopUnder5()<<"\%";
     out <<  " and total: " << SD.getpopUnder5Count();
     out << "\nEducation info: ";
-    out << "\n(Bachelor degree or more): " << SD.getBAup()<<"\%";
+    out << "\n(Bachelor or more): " << SD.getBAup()<<"\%";
     out <<  " and total: " << SD.getBAupCount();
     out << "\n(high school or more): " << SD.getHSup()<<"\%";
     out <<  " and total: " << SD.getHSupCount();
     out << "\npersons below poverty: " << SD.getBelowPoverty()<<"\%";
-    out <<  " and total: " << SD.getpopPoorCount();
+    out <<  " and total: " << SD.getpopPoorCount();  
+    out << "\nTotal population: " << SD.getPop();
     out << "\n" << SD.getRaceData();
 
-    out << "\nTotal population: " << SD.getPop();
+  
     return out;
 }
