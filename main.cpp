@@ -8,7 +8,7 @@
 #include "dataAQ.h"
 
 using namespace std;
-
+//README: This is a paired lab. The memebers are Jiayang Zhao and Ziyue Wang.
 int main() {
 
     dataAQ theAnswers;
