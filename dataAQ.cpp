@@ -30,21 +30,22 @@ string makeKeyExample(shared_ptr<demogData> theData) {
 
 
 string makeKeyExample(shared_ptr<psData> theData) {
-
   string theKey = "Key";
-
-  
-  if (theData->getFleeing() == "Foot") {
-    theKey += "FleeingOnFoot";
-  } else if (theData->getFleeing() == "Car") {
-    theKey += "FleeingByCar";
-
-  } else if (theData->getFleeing() == "Other") {
-    theKey += "FleeingOtherMeans";
+  if (theData->getRace() == "W") {
+    theKey += "WhiteVictim";
+  } else if (theData->getRace() == "A") {
+    theKey += "AsianVictim";
+  } else if (theData->getRace() == "H") {
+    theKey += "HispanicVictim";
+  } else if (theData->getRace() == "N") {
+    theKey += "NativeAmericanVictim";
+  } else if (theData->getRace() == "B") {
+    theKey += "AfricanAmericanVictim";
+  } else if (theData->getRace() == "O") {
+    theKey += "OtherRaceVictim";
   } else {
-    theKey += "NotFleeing";
+    theKey += "RaceUnspecifiedVictim";
   }
-  
   return theKey;
 }
 
