@@ -94,14 +94,14 @@ shared_ptr<demogData> readCSVLineDemog(std::string theLine) {
 
     int totalPop2014 = stoi(getField(ss));
  
-    int FirstNationCount = FirstNation * totalPop2014;
-    int AsianCount = Asian * totalPop2014;
-    int BlackCount = Black * totalPop2014;
-    int LatinxCount = Latinx * totalPop2014;
-    int HIPacificIsleCount = HIPacificIsle * totalPop2014;
-    int MultiRaceCount = MultiRace * totalPop2014;
-    int WhiteCount = White * totalPop2014;
-    int WhiteNHCount = WhiteNH * totalPop2014;
+    int FirstNationCount = round(FirstNation * totalPop2014);
+    int AsianCount = round(Asian * totalPop2014);
+    int BlackCount = round(Black * totalPop2014);
+    int LatinxCount = round(Latinx * totalPop2014);
+    int HIPacificIsleCount = round(HIPacificIsle * totalPop2014);
+    int MultiRaceCount = round(MultiRace * totalPop2014);
+    int WhiteCount = round(White * totalPop2014);
+    int WhiteNHCount = round(WhiteNH * totalPop2014);
 
     raceDemogData race(FirstNationCount, AsianCount, BlackCount, LatinxCount, HIPacificIsleCount, MultiRaceCount, WhiteCount, WhiteNHCount, totalPop2014);
 
